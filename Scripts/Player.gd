@@ -40,7 +40,7 @@ func _process(_delta):
 		OS.window_fullscreen = !OS.window_fullscreen
 	
 	# restart level
-	if Input.is_action_just_pressed("restart"):
+	if Input.is_action_just_pressed("restart") or position.y > 5000:
 		get_tree().reload_current_scene()
 
 func _physics_process(delta):
